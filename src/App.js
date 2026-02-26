@@ -1,46 +1,35 @@
 import "./App.css";
 import { useState } from "react";
-// Number State
-// Functional Update
-// Boolean State
-// Toggle
 function App() {
-  const [count, setCount] = useState(1);
-  const [isOpen, setIsOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-  const [name, setName] = useState("");
-  const [user, setUser] = useState({
-    name: "",
-    email: ""
-  });
-  
+  const [count, setCount] = useState(0);
+  let message;
+  if (count < 50) {
+    message = "Low";
+  } else if (count <= 150) {
+    message = "Medium";
+  } else {
+    message = "high";
+  }
+  const handler = () => {
+    setCount((prev) => prev + 1);
+  };
+  const handler2 = () => {
+    if (count < 1) {
+      setCount(0);
+    } else {
+      setCount((prev) => prev - 1);
+    }
+  };
+  const handler3 = () => {
+    setCount(0);
+  };
   return (
-    <div>
-      <h1>Counter: [{count}]</h1>
-      <button onClick={() => setCount(count + 4410)}>Increase</button>
-
-      <button onClick={() => setCount(count - 991)}>Decrease</button>
-
-      <button onClick={() => setCount((prev) => prev + 9)}>Increase</button>
-      <br />
-      <br />
-
-      <button onClick={() => setIsOpen((prev) => !prev)}>toggle</button>
-      <br />
-      <br />
-
-      {isOpen && (
-        <p>
-          Now Visible hello babe how are you <br /> doing i love you okay na
-        </p>
-      )}
-      <input value={name} onChange={(e) => setName(e.target.value)} />
-
-      <h2>Hello: {name}</h2>
-
-      <button onclick ={() => setDarkMode(prev => !prev)}>toggle DarkMode</button>
-
-      {darkMode && (<p>garkjdhskfb</p>)}
+    <div className="container">
+      <h2>Counter: {count}</h2>
+      <p id="message">level: {message}</p>
+      <button onClick={handler}>Increase</button>
+      <button onClick={handler2}>decrease</button>
+      <button onClick={handler3}>Reset</button>
     </div>
   );
 }
