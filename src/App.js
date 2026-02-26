@@ -1,23 +1,35 @@
 import "./App.css";
-import Greeting from "./Greetings";
-
-const name = "Emmanuel";
-const age = 19;
-const Uni = "University of Buea";
+import { useState } from "react";
+// Number State
+// Functional Update
+// Boolean State
+// Toggle
 function App() {
+  const [count, setCount] = useState(1);
+  const [isOpen, setIsOpen] = useState(false);
+  const [name, setName] = useState("");
   return (
     <div>
-      <Greeting />
-      <pre>
-        <h1>Hello world I am {name}</h1>
-        <p>
-          I am {age} years old and will be turning {age + 1} this june 6 2026
-        </p>
-        <p>From the {Uni} Cameroon</p>
-        <p>This is my first real React Lesson</p>
-      </pre>
+      <h1>Counter: [{count}]</h1>
+      <button onClick={() => setCount(count + 4410)}>Increase</button>
+
+      <button onClick={() => setCount(count - 991)}>Decrease</button>
+
+      <button onClick={() => setCount(prev => prev +  9)}>Increase</button><br /><br />
+
+      <button onClick={() => setIsOpen(prev => !prev)}>toggle</button><br /><br />
+
+      {isOpen && <p>Now Visible
+        hello babe how are you <br /> doing i love you
+        okay na
+        </p>}
+      <input 
+        value = {name}
+        onChange= {(e) => setName(e.target.value)}
+      />
+      <h2>Hello: {name}</h2>
+      
     </div>
   );
 }
-
 export default App;
