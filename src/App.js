@@ -1,12 +1,11 @@
-import "./App.css";
 import PasswordToggle  from "./PasswordToggel";
-import Counter from "./execise1";
+import Counter from './ExeciseOne';
 function App() {
-  return(
-    <>
-  <Counter />
-  <PasswordToggle />
-  </>
+  return (
+    <div>
+      <PasswordToggle />
+      <Counter />
+    </div>
   );
 }
 export default App;
