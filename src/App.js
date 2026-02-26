@@ -7,6 +7,7 @@ import { useState } from "react";
 function App() {
   const [count, setCount] = useState(1);
   const [isOpen, setIsOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   const [name, setName] = useState("");
   const [user, setUser] = useState({
     name: "",
@@ -20,19 +21,26 @@ function App() {
 
       <button onClick={() => setCount(count - 991)}>Decrease</button>
 
-      <button onClick={() => setCount(prev => prev +  9)}>Increase</button><br /><br />
+      <button onClick={() => setCount((prev) => prev + 9)}>Increase</button>
+      <br />
+      <br />
 
-      <button onClick={() => setIsOpen(prev => !prev)}>toggle</button><br /><br />
+      <button onClick={() => setIsOpen((prev) => !prev)}>toggle</button>
+      <br />
+      <br />
 
-      {isOpen && <p>Now Visible
-        hello babe how are you <br /> doing i love you
-        okay na
-        </p>}
-      <input 
-        value = {name}
-        onChange= {(e) => setName(e.target.value)}
-      />
+      {isOpen && (
+        <p>
+          Now Visible hello babe how are you <br /> doing i love you okay na
+        </p>
+      )}
+      <input value={name} onChange={(e) => setName(e.target.value)} />
+
       <h2>Hello: {name}</h2>
+
+      <button onclick ={() => setDarkMode(prev => !prev)}>toggle DarkMode</button>
+
+      {darkMode && (<p>garkjdhskfb</p>)}
     </div>
   );
 }
