@@ -3,8 +3,8 @@ import Counter from './ExeciseOne';
 function App() {
   return (
     <div>
-      <PasswordToggle />
       <Counter />
+      <PasswordToggle />
     </div>
   );
 }

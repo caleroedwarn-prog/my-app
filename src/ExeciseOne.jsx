@@ -23,6 +23,7 @@ const [count, setCount] = useState(0);
   const handler3 = () => {
     setCount(0);
   };
+  return(
   <div className="container">
     <h2>Counter: {count}</h2>
     <p id="message">level: {message}</p>
@@ -30,5 +31,6 @@ const [count, setCount] = useState(0);
     <button onClick={handler2}>decrease</button>
     <button onClick={handler3}>Reset</button>
   </div>
+  );
 }
 export default Counter;
