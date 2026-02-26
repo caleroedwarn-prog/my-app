@@ -8,6 +8,11 @@ function App() {
   const [count, setCount] = useState(1);
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState("");
+  const [user, setUser] = useState({
+    name: "",
+    email: ""
+  });
+  
   return (
     <div>
       <h1>Counter: [{count}]</h1>
@@ -28,7 +33,6 @@ function App() {
         onChange= {(e) => setName(e.target.value)}
       />
       <h2>Hello: {name}</h2>
-      
     </div>
   );
 }
