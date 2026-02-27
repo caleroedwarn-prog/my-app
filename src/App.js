@@ -6,6 +6,7 @@ import Example from "./EventHandler1";
 import InputExample from "./EventHandler2";
 import FormExample from "./EventHandler3";
 import KeyExample from "./EventHandler4";
+import HandleClick from "./E-Exercise1";
 function App() {
   return (
     <div>
@@ -18,7 +19,8 @@ function App() {
       <InputExample />
       <FormExample />
       <br />
-      <KeyExample />
+      <KeyExample /><br />
+      <HandleClick />
     </div>
   );
 }
