@@ -5,6 +5,7 @@ function HandleClick(){
     function handleButton(e){
         e.preventDefault();
         console.log("I've been click");
+
             setCount((prev) => prev + 1);
     }
     return(
