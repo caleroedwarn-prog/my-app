@@ -13,6 +13,18 @@ import ConditionalRendering from "./CR-exercise1";
 import Rendering from "./CR-Exercise2";
 import Toggle from "./CR-Exercise3";
 function App() {
+  const names =["Emmanuel", "Teniola", "React", "JavaScript"];
+  const users = [
+    {id: 1, name: "Emmanuel"},
+    {id: 2, name: "Teniola"}
+  ];
+  const items = [
+    {id: 1, title:"Learn Jsx"},
+    {id: 1, title:"Learn React"},
+    {id: 1, title:"Learn List"},
+    {id: 1, title:"Learn CSS"},
+    {id: 1, title:"Learn JavaScript"}
+  ]
   return (
     <div>
       <Counter />
@@ -31,6 +43,21 @@ function App() {
       <ConditionalRendering /><br />
       <Rendering />
       <Toggle />
+      <ul>
+        {names.map((names, index) => 
+        <li key={index}>{names}</li>
+        )}
+      </ul>
+      <ul>
+      {users.map((users) => 
+      <li key={users.id}>{users.name}</li>
+      )}
+      </ul>
+      <ul>
+        {items.map((items) => 
+        <li key={items.id}>{items.title}<button> ✅</button></li>
+        )}
+      </ul>
     </div>
   );
 }
