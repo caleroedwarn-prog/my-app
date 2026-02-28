@@ -11,6 +11,7 @@ import HandleAlert from "./E-Exercise2";
 import HandleClicks from "./E-Exercise3";
 import ConditionalRendering from "./CR-exercise1";
 import Rendering from "./CR-Exercise2";
+import Toggle from "./CR-Exercise3";
 function App() {
   return (
     <div>
@@ -29,6 +30,7 @@ function App() {
       <HandleClicks />
       <ConditionalRendering /><br />
       <Rendering />
+      <Toggle />
     </div>
   );
 }
