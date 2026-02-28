@@ -8,6 +8,7 @@ import FormExample from "./EventHandler3";
 import KeyExample from "./EventHandler4";
 import HandleClick from "./E-Exercise1";
 import HandleAlert from "./E-Exercise2";
+import HandleClicks from "./E-Exercise3";
 function App() {
   return (
     <div>
@@ -22,7 +23,8 @@ function App() {
       <br />
       <KeyExample /><br />
       <HandleClick /><br />
-      <HandleAlert />
+      <HandleAlert /><br />
+      <HandleClicks />
     </div>
   );
 }
