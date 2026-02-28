@@ -9,6 +9,7 @@ import KeyExample from "./EventHandler4";
 import HandleClick from "./E-Exercise1";
 import HandleAlert from "./E-Exercise2";
 import HandleClicks from "./E-Exercise3";
+import ConditionalRendering from "./CR-exercise1";
 function App() {
   return (
     <div>
@@ -25,6 +26,7 @@ function App() {
       <HandleClick /><br />
       <HandleAlert /><br />
       <HandleClicks />
+      <ConditionalRendering />
     </div>
   );
 }

@@ -1,0 +1,14 @@
+import { useState } from "react";
+
+function ConditionalRendering(){
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    return (
+      <>
+        <button type onClick={() => setIsLoggedIn((prev) => !prev)}>
+          {isLoggedIn ? "logout" : "login"}
+        </button>
+        {isLoggedIn ? "Welcome Back" : "please Login"}
+      </>
+    );
+}
+export default ConditionalRendering;
