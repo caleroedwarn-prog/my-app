@@ -12,6 +12,7 @@ import HandleClicks from "./E-Exercise3";
 import ConditionalRendering from "./CR-exercise1";
 import Rendering from "./CR-Exercise2";
 import Toggle from "./CR-Exercise3";
+import ToDoList from "./Keys-&-Lists-ToDoList";
 function App() {
   const names =["Emmanuel", "Teniola", "React", "JavaScript"];
   const users = [
@@ -57,7 +58,9 @@ function App() {
         {items.map((items) => 
         <li key={items.id}>{items.title}<button> ✅</button></li>
         )}
-      </ul>
+      </ul><br />
+      <ToDoList />
+
     </div>
   );
 }
