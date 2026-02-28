@@ -10,6 +10,7 @@ import HandleClick from "./E-Exercise1";
 import HandleAlert from "./E-Exercise2";
 import HandleClicks from "./E-Exercise3";
 import ConditionalRendering from "./CR-exercise1";
+import Rendering from "./CR-Exercise2";
 function App() {
   return (
     <div>
@@ -26,7 +27,8 @@ function App() {
       <HandleClick /><br />
       <HandleAlert /><br />
       <HandleClicks />
-      <ConditionalRendering />
+      <ConditionalRendering /><br />
+      <Rendering />
     </div>
   );
 }
