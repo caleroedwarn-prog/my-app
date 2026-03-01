@@ -16,7 +16,7 @@ import ToDoList from "./Keys-&-Lists-ToDoList";
 import {useState, useEffect} from "react";
 import Component from "./component-live-cycle";
 function App() {
-  const
+  const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
   useEffect(() => {
     console.log("count changed to", count)
@@ -72,6 +72,11 @@ function App() {
       </button>
 
       <Component />
+
+      <button onClick={() => setShow(!show)}>
+        toggle
+      </button>
+      {show && <Counter />}
     </div>
   );
 }
