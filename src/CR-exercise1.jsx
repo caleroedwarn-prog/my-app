@@ -4,7 +4,7 @@ function ConditionalRendering(){
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     return (
       <>
-      <p><strong>Exercise1 on Conditional Rendering</strong></p>
+      <strong>Exercise1 on Conditional Rendering</strong>
         <button type onClick={() => setIsLoggedIn((prev) => !prev)}>
           {isLoggedIn ? "logout" : "login"}
         </button>

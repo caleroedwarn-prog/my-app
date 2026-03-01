@@ -14,6 +14,7 @@ import Rendering from "./CR-Exercise2";
 import Toggle from "./CR-Exercise3";
 import ToDoList from "./Keys-&-Lists-ToDoList";
 import {useState, useEffect} from "react";
+import Component from "./component-live-cycle";
 function App() {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -26,10 +27,10 @@ function App() {
   ];
   const items = [
     {id: 1, title:"Learn Jsx"},
-    {id: 1, title:"Learn React"},
-    {id: 1, title:"Learn List"},
-    {id: 1, title:"Learn CSS"},
-    {id: 1, title:"Learn JavaScript"}
+    {id: 2, title:"Learn React"},
+    {id: 3, title:"Learn List"},
+    {id: 4, title:"Learn CSS"},
+    {id: 5, title:"Learn JavaScript"}
   ]
   return (
     <div>
@@ -62,12 +63,14 @@ function App() {
       <ul>
         {items.map((items) => 
         <li key={items.id}>{items.title}<button> ✅</button></li>
-        )}
+        )};
       </ul><br />
       <ToDoList />
       <p>Counter: {count}</p>
       <button onClick={() => setCount(prev => (prev + 1))}>Toggle 
       </button>
+
+      <Component />
     </div>
   );
 }
