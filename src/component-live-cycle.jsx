@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Component(){
     const[count, setCount] = useState(0);
+    useEffect(() => {
+        return () => {
+        console.log("Mounted");
+        };
+    }, []);
     return(
         <>
         <h3>Counter: {count}</h3>
