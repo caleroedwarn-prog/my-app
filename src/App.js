@@ -13,7 +13,12 @@ import ConditionalRendering from "./CR-exercise1";
 import Rendering from "./CR-Exercise2";
 import Toggle from "./CR-Exercise3";
 import ToDoList from "./Keys-&-Lists-ToDoList";
+import {useState, useEffect} from "react";
 function App() {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    console.log("count changed to", count)
+  }, [count]);
   const names =["Emmanuel", "Teniola", "React", "JavaScript"];
   const users = [
     {id: 1, name: "Emmanuel"},
@@ -60,7 +65,9 @@ function App() {
         )}
       </ul><br />
       <ToDoList />
-
+      <p>Counter: {count}</p>
+      <button onClick={() => setCount(prev => (prev + 1))}>Toggle 
+      </button>
     </div>
   );
 }
