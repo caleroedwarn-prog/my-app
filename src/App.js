@@ -15,6 +15,7 @@ import Toggle from "./CR-Exercise3";
 import ToDoList from "./Keys-&-Lists-ToDoList";
 import {useState, useEffect} from "react";
 import Component from "./component-live-cycle";
+import Examples from "./Ex1-CLC";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -77,6 +78,7 @@ function App() {
         toggle
       </button>
       {show && <Counter />}
+      <Examples />
     </div>
   );
 }
