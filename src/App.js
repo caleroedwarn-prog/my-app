@@ -18,6 +18,7 @@ import Component from "./component-live-cycle";
 import Examples from "./Ex1-CLC";
 import Reference from "./Ex2-CLC";
 import MemoExample from "./UseMemo";
+import DoubleCalculation from "./UM-ex1";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -38,6 +39,7 @@ function App() {
   ]
   return (
     <div>
+      <DoubleCalculation />
       <Reference />
       <Counter />
       <PasswordToggle />
