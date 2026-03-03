@@ -17,6 +17,7 @@ import {useState, useEffect} from "react";
 import Component from "./component-live-cycle";
 import Examples from "./Ex1-CLC";
 import Reference from "./Ex2-CLC";
+import MemoExample from "./UseMemo";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -81,6 +82,7 @@ function App() {
       </button>
       {show && <Counter />}
       <Examples />
+      <MemoExample number = {5} />
     </div>
   );
 }
