@@ -19,6 +19,7 @@ import Examples from "./Ex1-CLC";
 import Reference from "./Ex2-CLC";
 import MemoExample from "./UseMemo";
 import DoubleCalculation from "./UM-ex1";
+import Apps from "./UC-ex1";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -37,8 +38,11 @@ function App() {
     {id: 4, title:"Learn CSS"},
     {id: 5, title:"Learn JavaScript"}
   ]
+  
   return (
     <div>
+      <br></br>
+      <Apps /><br></br>
       <DoubleCalculation />
       <Reference />
       <Counter />
