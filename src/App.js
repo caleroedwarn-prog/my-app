@@ -21,6 +21,7 @@ import MemoExample from "./UseMemo";
 import DoubleCalculation from "./UM-ex1";
 import Apps from "./UC-ex1";
 import AppTest from "./Controled";
+import DisableButton from "./C-DisabledButton";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -42,6 +43,8 @@ function App() {
   
   return (
     <div>
+      <br></br>
+      <DisableButton />
       <br></br>
       <AppTest />
       <br></br>

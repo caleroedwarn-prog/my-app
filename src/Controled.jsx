@@ -4,10 +4,10 @@ function AppTest(){
     const [text, setText] = useState("");
     let message;
     function condition(e){
-        if(text.length>= 20){
-          message = "Limit exceeded";
-        }else{
+        if(text.length <= 20){
             setText(e.target.value);
+        }else{
+            message = "Limit exceeded";
         }
     }
 
