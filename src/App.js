@@ -22,6 +22,7 @@ import DoubleCalculation from "./UM-ex1";
 import Apps from "./UC-ex1";
 import AppTest from "./Controled";
 import DisableButton from "./C-DisabledButton";
+import LoginForm from "./FH-SimpleLogin";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -43,6 +44,8 @@ function App() {
   
   return (
     <div>
+      <br></br>
+      <LoginForm />
       <br></br>
       <DisableButton />
       <br></br>
