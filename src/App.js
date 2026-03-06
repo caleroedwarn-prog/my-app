@@ -22,7 +22,7 @@ import DoubleCalculation from "./UM-ex1";
 import Apps from "./UC-ex1";
 import AppTest from "./Controled";
 import DisableButton from "./C-DisabledButton";
-import LoginForm from "./FH-SimpleLogin";
+import LoginForm from "./SimpleLogin";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
