@@ -20,6 +20,7 @@ import Reference from "./Ex2-CLC";
 import MemoExample from "./UseMemo";
 import DoubleCalculation from "./UM-ex1";
 import Apps from "./UC-ex1";
+import AppTest from "./Controled";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -41,6 +42,8 @@ function App() {
   
   return (
     <div>
+      <br></br>
+      <AppTest />
       <br></br>
       <Apps /><br></br>
       <DoubleCalculation />
