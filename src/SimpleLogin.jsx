@@ -16,7 +16,7 @@ function LoginForm() {
             value={email}
             placeholder="Enter Email"
             onChange={(e) => setEmail(e.target.value)}
-            />
+            /><br />
 
             <input 
             type="password"
