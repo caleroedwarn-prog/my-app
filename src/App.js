@@ -23,6 +23,7 @@ import Apps from "./UC-ex1";
 import AppTest from "./Controled";
 import DisableButton from "./C-DisabledButton";
 import LoginForm from "./SimpleLogin";
+import LoginForms from "./ShowLoginMsg";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -44,6 +45,8 @@ function App() {
   
   return (
     <div>
+      <br></br>
+      <LoginForms />
       <br></br>
       <LoginForm />
       <br></br>
