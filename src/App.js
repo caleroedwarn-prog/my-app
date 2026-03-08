@@ -28,6 +28,7 @@ import Login from "./LoginExercise"
 import SignUp from "./MultipleInputForm";
 import SignUps from "./ExerciseLogin";
 import ButtonSignUp from "./DisableButtonLogin";
+import  LiveValidation from "./LiveFormValidation"
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -49,6 +50,8 @@ function App() {
   
   return (
     <div>
+      <br />
+      <LiveValidation />
       <br />
       <ButtonSignUp />
       <br />

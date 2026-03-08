@@ -58,7 +58,7 @@ function LiveValidation() {
               onChange={handleForm}
                /><br />
 
-               <button type="submit" disabled= {!isMatch}>
+               <button type="submit" >
                 Submit
                </button>
                {isTyping && (
