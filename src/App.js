@@ -27,7 +27,7 @@ import LoginForms from "./ShowLoginMsg";
 import Login from "./LoginExercise"
 import SignUp from "./MultipleInputForm";
 import SignUps from "./ExerciseLogin";
-import ButtonSignUp from "./C-DisabledButton";
+import ButtonSignUp from "./DisableButtonLogin";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -66,7 +66,8 @@ function App() {
       <br></br>
       <AppTest />
       <br></br>
-      <Apps /><br></br>
+      <Apps />
+      <br></br>
       <DoubleCalculation />
       <Reference />
       <Counter />
@@ -74,45 +75,52 @@ function App() {
       <PasswordCheck />
       <br />
       <ClickExample />
-      <Example /><br />
+      <Example />
+      <br />
       <InputExample />
       <FormExample />
       <br />
-      <KeyExample /><br />
-      <HandleClick /><br />
-      <HandleAlert /><br />
+      <KeyExample />
+      <br />
+      <HandleClick />
+      <br />
+      <HandleAlert />
+      <br />
       <HandleClicks />
-      <ConditionalRendering /><br />
+      <ConditionalRendering />
+      <br />
       <Rendering />
       <Toggle />
       <ul>
-        {names.map((names, index) => 
-        <li key={index}>{names}</li>
-        )}
+        {names.map((names, index) => (
+          <li key={index}>{names}</li>
+        ))}
       </ul>
       <ul>
-      {users.map((users) => 
-      <li key={users.id}>{users.name}</li>
-      )}
+        {users.map((users) => (
+          <li key={users.id}>{users.name}</li>
+        ))}
       </ul>
       <ul>
-        {items.map((items) => 
-        <li key={items.id}>{items.title}<button> ✅</button></li>
-        )};
-      </ul><br />
+        {items.map((items) => (
+          <li key={items.id}>
+            {items.title}
+            <button> ✅</button>
+          </li>
+        ))}
+        ;
+      </ul>
+      <br />
       <ToDoList />
       <p>Counter: {count}</p>
-      <button onClick={() => setCount(prev => (prev + 1))}>Toggle 
-      </button>
+      <button onClick={() => setCount((prev) => prev + 1)}>Toggle</button>
 
       <Component />
 
-      <button onClick={() => setShow(!show)}>
-        toggle
-      </button>
+      <button onClick={() => setShow(!show)}>toggle</button>
       {show && <Counter />}
       <Examples />
-      <MemoExample number = {5} />
+      <MemoExample number={5} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
-import {useState} from "react";
+import { useState } from "react";
 
 function ButtonSignUp() {
-    const [form, setForm] = useState({
+    const [forms, setForms] = useState({
         name: "",
         email: "",
         password: "",
@@ -9,54 +9,56 @@ function ButtonSignUp() {
     });
     const [message, setMessage] = useState("");
 
-    const handleChange = (e) =>{
-        setForm({ ...form, [e.target.name]: e.target.value });
+    const handleForms = (e) =>{
+        setForms({...forms,
+          [e.target.name] : e.target.value
+        });
     };
-    const handleSubmit = (e) =>{
+    const handleSubmits = (e) =>{
         e.preventDefault();
-        console.log(form);
-        if(form.password !== form.confirmPassword){
+        if(forms.password === forms.confirmPassword){
             setMessage("Login Success");
         }else{
             setMessage("Invalid credential");
         }
     };
-    const isMatch = form.password === form.confirmPassword;
+    const isMatch = forms.password === forms.confirmPassword;
     return (
-      <form onSubmit={handleSubmit}>
+      <>
+      <form onSubmit={handleSubmits}>
         <input
           type="text"
           name="name"
-          value={form.name}
+          value={forms.name}
           placeholder="Enter Name"
-          onChange={handleChange}
+          onChange={handleForms}
         />
         <br />
 
         <input
           type="email"
-          name="name"
-          value={form.email}
+          name="email"
+          value={forms.email}
           placeholder="Enter Email"
-          onChange={handleChange}
+          onChange={handleForms}
         />
         <br />
 
         <input
           type="password"
-          name="name"
-          value={form.password}
+          name="password"
+          value={forms.password}
           placeholder="Enter Password"
-          onChange={handleChange}
+          onChange={handleForms}
         />
         <br />
 
         <input
           type="password"
-          name="name"
-          value={form.confirmPassword}
+          name="confirmPassword"
+          value={forms.confirmPassword}
           placeholder="confirm passowrd"
-          onChange={handleChange}
+          onChange={handleForms}
         />
         <br />
 
@@ -66,6 +68,7 @@ function ButtonSignUp() {
         </button>
         <p>{message}</p>
       </form>
+</>
     );
 
 }
