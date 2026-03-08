@@ -27,6 +27,7 @@ import LoginForms from "./ShowLoginMsg";
 import Login from "./LoginExercise"
 import SignUp from "./MultipleInputForm";
 import SignUps from "./ExerciseLogin";
+import ButtonSignUp from "./C-DisabledButton";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -48,6 +49,9 @@ function App() {
   
   return (
     <div>
+      <br />
+      <ButtonSignUp />
+      <br />
       <SignUps />
       <br />
       <SignUp />
