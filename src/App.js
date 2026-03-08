@@ -26,6 +26,7 @@ import LoginForm from "./SimpleLogin";
 import LoginForms from "./ShowLoginMsg";
 import Login from "./LoginExercise"
 import SignUp from "./MultipleInputForm";
+import SignUps from "./ExerciseLogin";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -47,6 +48,8 @@ function App() {
   
   return (
     <div>
+      <SignUps />
+      <br />
       <SignUp />
       <br />
       <Login />

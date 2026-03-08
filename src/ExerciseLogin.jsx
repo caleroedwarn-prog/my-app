@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-function SignUp() {
+function SignUps() {
 const [form, setForm] = useState({
     name : "",
     email : "",
@@ -10,15 +10,15 @@ const [form, setForm] = useState({
 const [message, setMessage] = useState("");
  const handleForm = (e) => {
     setForm({...form, [e.target.name]: e.target.value})
-    if(form.password !== form.confirmPassword){
-        setMessage("Password donot match")
-    }else{
-        setMessage(`confirmed ${form.name}`)
-    }
  };
 const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form)
+    if (form.password !== form.confirmPassword) {
+      setMessage("Password donot match");
+    } else {
+      setMessage(`confirmed ${form.name}`);
+    }
 };
  
 return (
@@ -26,7 +26,7 @@ return (
     <form onClick={handleSubmit}>
       <input
         type="name"
-        placeholder="Enter password"
+        placeholder="Enter your Name"
         value={form.name}
         onChange={handleForm}
       />
@@ -34,7 +34,7 @@ return (
 
       <input
         type="email"
-        placeholder="Enter password"
+        placeholder="Enter Email"
         value={form.email}
         onChange={handleForm}
       />
@@ -62,4 +62,4 @@ return (
   </div>
   );
 }
-export default SignUp;
+export default SignUps;
