@@ -25,6 +25,7 @@ import DisableButton from "./C-DisabledButton";
 import LoginForm from "./SimpleLogin";
 import LoginForms from "./ShowLoginMsg";
 import Login from "./LoginExercise"
+import SignUp from "./MultipleInputForm";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -46,6 +47,8 @@ function App() {
   
   return (
     <div>
+      <SignUp />
+      <br />
       <Login />
       <br></br>
       <LoginForms />
