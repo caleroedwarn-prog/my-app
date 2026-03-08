@@ -13,7 +13,6 @@ const [message, setMessage] = useState("");
  };
 const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form)
     if (form.password !== form.confirmPassword) {
       setMessage("Password donot match");
     } else {
