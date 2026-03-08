@@ -9,22 +9,22 @@ const [form, setForm] = useState({
 });
 const [message, setMessage] = useState("");
  const handleForm = (e) => {
-    setForm({...form, [e.target.name]: e.target.value})
+    setForm({...form, [e.target.name]: e.target.value});
  };
 const handleSubmit = (e) => {
     e.preventDefault();
     if (form.password !== form.confirmPassword) {
       setMessage("Password donot match");
     } else {
-      setMessage(`confirmed ${form.name}`);
+      setMessage("LOGIN SUCCESS");
     }
 };
  
 return (
-  <div>
-    <form onClick={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <input
-        type="name"
+        type="text"
+        name='name'
         placeholder="Enter your Name"
         value={form.name}
         onChange={handleForm}
@@ -33,6 +33,7 @@ return (
 
       <input
         type="email"
+        name='email'
         placeholder="Enter Email"
         value={form.email}
         onChange={handleForm}
@@ -41,6 +42,7 @@ return (
 
       <input
         type="password"
+        name='password'
         placeholder="Enter Password"
         value={form.password}
         onChange={handleForm}
@@ -49,6 +51,7 @@ return (
 
       <input
         type="password"
+        name='confirmPassword'
         placeholder="confirm Password"
         value={form.confirmPassword}
         onChange={handleForm}
@@ -56,9 +59,8 @@ return (
       <br />
 
       <button type="submit">Submit</button>
+      <p>{message}</p>
     </form>
-    <p>{message}</p>
-  </div>
-  );
+);
 }
 export default SignUps;
