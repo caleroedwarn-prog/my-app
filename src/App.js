@@ -31,6 +31,7 @@ import ButtonSignUp from "./DisableButtonLogin";
 import  LiveValidation from "./LiveFormValidation";
 import FormExercise from "./Show-PasswordLoding-ValidationForm";
 import CustomHookForm  from "./CustomHooksLogin";
+import Home from "./pages/Home";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -52,6 +53,9 @@ function App() {
   
   return (
     <div>
+      <br />
+      <h1>My App</h1>
+      <Home />
       <br />
       <CustomHookForm />
       <br />
