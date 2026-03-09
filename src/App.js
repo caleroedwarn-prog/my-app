@@ -28,7 +28,8 @@ import Login from "./LoginExercise"
 import SignUp from "./MultipleInputForm";
 import SignUps from "./ExerciseLogin";
 import ButtonSignUp from "./DisableButtonLogin";
-import  LiveValidation from "./LiveFormValidation"
+import  LiveValidation from "./LiveFormValidation";
+import FormExercise from "./Show-PasswordLoding-ValidationForm";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -50,6 +51,8 @@ function App() {
   
   return (
     <div>
+      <br />
+      <FormExercise />
       <br />
       <LiveValidation />
       <br />
