@@ -1,4 +1,4 @@
-function Card({ name, age, job }) {
+function Card({ name, age, job, country }) {
     return(
         <div style={{
             border: "1px solid black",
@@ -9,6 +9,7 @@ function Card({ name, age, job }) {
            <h3>{name}</h3> 
            <p>Age: {age}</p>
            <p>Job: {job}</p>
+           <p>Country: {country}</p>
         </div>
     );
 }
