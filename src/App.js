@@ -56,7 +56,7 @@ function App() {
   return (
     <div>
       <br />
-      <Home2 />
+      <Home2 /> 
       <br />
       <Home1 />
       <br />
