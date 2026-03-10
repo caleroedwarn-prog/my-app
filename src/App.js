@@ -33,6 +33,7 @@ import FormExercise from "./Show-PasswordLoding-ValidationForm";
 import CustomHookForm  from "./CustomHooksLogin";
 import Home from "./pages/Home";
 import Home1 from "./pages/Home1";
+import Home2 from "./pages/Home2";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -54,6 +55,8 @@ function App() {
   
   return (
     <div>
+      <br />
+      <Home2 />
       <br />
       <Home1 />
       <br />
