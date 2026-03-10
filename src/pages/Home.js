@@ -3,7 +3,7 @@ import Button
 function Home(){
     return (
         <>
-        <h2>Home Page</h2>
+        <h3>Home Page</h3>
         <Button text="click me" />
         </>
     );
