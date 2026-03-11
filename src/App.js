@@ -38,6 +38,7 @@ import Home2 from "./pages/Home2";
 import Homes from "./pages/Homes";
 import About from "./pages/About";
 import Logins from "./pages/Login";
+import Navbar from "./component/Navbar";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
@@ -61,6 +62,7 @@ function App() {
     <div>
       <br />
       <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path ="/" element={<Homes />} />
         <Route path="/about" element={<About />} />
