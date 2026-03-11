@@ -17,10 +17,9 @@ function App() {
           <Route path="/" element={<Homes />} />
           <Route path="/about" element={<About />} />     
           <Route path="/logins" element={<Logins setIsLoggedIn={setIsLoggedIn} />} />
-          <Route path="/dashboard" element={<ProtectedRoute isLoggedIn={isLoggedIn}>
-            <Dashboard />
-            </ProtectedRoute>
-            }/>
+         <Route 
+         path="dashboard"
+         element={isLoggedIn ? <Dashboard /> : <Logins setIsLoggedIn={setIsLoggedIn} />}/>
         </Routes>
       </BrowserRouter>
       <br />
