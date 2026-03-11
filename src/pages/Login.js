@@ -4,7 +4,6 @@ function Logins({ setIsLoggedIn }){
     const navigate = useNavigate();
 
     function handleLogin(){
-
         setIsLoggedIn(true);
         navigate("/dashboard");
     };

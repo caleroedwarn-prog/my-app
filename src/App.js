@@ -15,8 +15,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Homes />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/logins" element={<Logins />} />
+          <Route path="/about" element={<About />} />     
           <Route path="/logins" element={<Logins setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/dashboard" element={<ProtectedRoute isLoggedIn={isLoggedIn}>
             <Dashboard />
