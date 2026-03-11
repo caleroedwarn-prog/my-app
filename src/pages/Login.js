@@ -1,4 +1,4 @@
-function Login(){
+function Logins(){
     return <h2>Login Page</h2>
 }
-export default Login;
+export default Logins;

@@ -34,6 +34,9 @@ import CustomHookForm  from "./CustomHooksLogin";
 import Home from "./pages/Home";
 import Home1 from "./pages/Home1";
 import Home2 from "./pages/Home2";
+import Homes from "./pages/Homes";
+import About from "./pages/About";
+import Logins from "./pages/Login";
 function App() {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
