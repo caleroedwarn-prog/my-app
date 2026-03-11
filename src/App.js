@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PasswordToggle  from "./PasswordToggel";
 import Counter from './ExeciseOne';
 import PasswordCheck from "./PasswordCheck";
@@ -58,6 +59,14 @@ function App() {
   
   return (
     <div>
+      <br />
+      <BrowserRouter>
+      <Routes>
+        <Route path ="/" element={<Homes />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/logins" element={<Logins />} />
+      </Routes>
+      </BrowserRouter>
       <br />
       <Home2 /> 
       <br />
