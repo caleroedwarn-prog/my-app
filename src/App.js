@@ -13,13 +13,11 @@ function App() {
       <br />
       <BrowserRouter>
         <Navbar />
-        <button onClick={() => setIsLoggedIn(true)}>Login</button>
-        <button onClick={() => setIsLoggedIn(false)}>Login</button>
         <Routes>
           <Route path="/" element={<Homes />} />
           <Route path="/about" element={<About />} />
           <Route path="/logins" element={<Logins />} />
-
+          <Route path="/logins" element={<Logins setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/dashboard" element={<ProtectedRoute isLoggedIn={isLoggedIn}>
             <Dashboard />
             </ProtectedRoute>
