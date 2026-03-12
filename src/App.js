@@ -6,6 +6,7 @@ import Logins from "./pages/Login";
 import Navbar from "./component/Navbar";
 import ProtectedRoute from "./component/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
+import Layout from "./component/Layout";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
@@ -14,11 +15,12 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Homes />} />
+          <Route path="/" element={<Layout />} />
+          <Route index element={<Homes />} />
           <Route path="/about" element={<About />} />     
           <Route path="/logins" element={<Logins setIsLoggedIn={setIsLoggedIn} />} />
          <Route 
-         path="dashboard"
+         path="/dashboard"
          element={isLoggedIn ? <Dashboard /> : <Logins setIsLoggedIn={setIsLoggedIn} />}/>
         </Routes>
       </BrowserRouter>
