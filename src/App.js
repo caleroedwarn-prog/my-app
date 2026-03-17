@@ -17,10 +17,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />} />
           <Route index element={<Homes />} />
-          <Route path="/about" element={<About />} />     
-          <Route path="/logins" element={<Logins setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path="about" element={<About />} />     
+          <Route path="logins" element={<Logins setIsLoggedIn={setIsLoggedIn} />} />
          <Route 
-         path="/dashboard"
+         path="dashboard"
          element={isLoggedIn ? <Dashboard /> : <Logins setIsLoggedIn={setIsLoggedIn} />}/>
         </Routes>
       </BrowserRouter>

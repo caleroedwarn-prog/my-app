@@ -11,7 +11,7 @@ function Navbar({ isLoggedIn, setIsLoggedIn }){
             <Link to ="/">Home</Link> |
             <Link to="/about">About</Link> |
             {isLoggedIn && (
-                <Link to = "/dashboard">Dashboard</Link>
+                <Link to = "dashboard">Dashboard</Link>
             )}
             {!isLoggedIn && (
                 <Link to= "/logins">Login</Link>
