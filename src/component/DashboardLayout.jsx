@@ -2,8 +2,8 @@ import { Outlet, Link } from "react-router-dom";
 
 function DashboardLayout() {
     return(
-        <div style={{display:"flex", gap:"20px"}}>
-            <div>
+        <div style={{display:"block", gap:"20px"}}>
+            <div style={{gap:"300px"}}>
                 <h3>Dashboard Menu</h3>
                 <Link to= "profile">Profile</Link>
                 <Link to="setting">Settings</Link>
@@ -13,4 +13,4 @@ function DashboardLayout() {
         </div>
     );
 }
-export default DashboardLayout;
+export default DashboardLayout

@@ -7,6 +7,10 @@ import Navbar from "./component/Navbar";
 import ProtectedRoute from "./component/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
 import Layout from "./component/Layout";
+import DashboardLayout from "./component/DashboardLayout";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Setting";
+import Stats from "./pages/Stats";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
@@ -23,9 +27,14 @@ function App() {
          path="dashboard"
          element={
           <ProtectedRoute isLoggedIn={isLoggedIn}>
-            <Dashboard />
+            <DashboardLayout />
           </ProtectedRoute>
-         } />
+         } 
+         >
+         <Route path="profile" element={<Profile />} />
+         <Route path="setting" element={<Settings />} />
+         <Route path="stats" element={<Stats />} />
+         </Route>
         </Routes>
       </BrowserRouter>
       <br />
