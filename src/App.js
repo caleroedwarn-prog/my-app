@@ -21,7 +21,11 @@ function App() {
           <Route path="logins" element={<Logins setIsLoggedIn={setIsLoggedIn} />} />
          <Route 
          path="dashboard"
-         element={isLoggedIn ? <Dashboard /> : <Logins setIsLoggedIn={setIsLoggedIn} />}/>
+         element={
+          <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <Dashboard />
+          </ProtectedRoute>
+         } />
         </Routes>
       </BrowserRouter>
       <br />
