@@ -4,20 +4,20 @@ function Navbar({ isLoggedIn, setIsLoggedIn }){
     const navigate = useNavigate();
     function handleLogout(){
         setIsLoggedIn(false);
-        navigate("logins");
+        navigate("/logins");
     }
     return(
         <nav style={{display: "flex", gap: "10px"}}>
             <Link to ="/">Home</Link> |
             <Link to="/about">About</Link> |
             {isLoggedIn && (
-                <Link to = "/dashbord">Dashboard</Link>
+                <Link to = "/dashboard">Dashboard</Link>
             )}
             {!isLoggedIn && (
                 <Link to= "/logins">Login</Link>
             )}
             {isLoggedIn && (
-                <button onClick = {handleLogout}>Logout</button>
+                <button onClick={handleLogout}>Logout</button>
             )}
         </nav>
     );
