@@ -15,6 +15,7 @@ function Users(){
         { users.map(user => (
             <p key={user.id}>
             { user.name }
+            <br />
             {user.email}
             </p>
         ))}
