@@ -39,6 +39,7 @@ function App() {
             <Route path="profile" element={<Profile />} />
             <Route path="setting" element={<Settings />} />
             <Route path="stats" element={<Stats />} />
+            <Route path="user" element={<Users />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
