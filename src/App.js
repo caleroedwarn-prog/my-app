@@ -12,6 +12,7 @@ import Profile from "./pages/Profile";
 import Settings from "./pages/Setting";
 import Stats from "./pages/Stats";
 import NotFound from "./pages/NotFound";
+import Users from "./pages/User";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
