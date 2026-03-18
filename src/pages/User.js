@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 function Users(){
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/users").then(response => response.json()).then(data => {
-            console.log(data);
+        async function getUsers(){
+            const res = await fetch("https://jsonplaceholder.typicode.com/users");
+            const data = await res.json();
             setUsers(data)
-
-        });
+        }
+        getUsers();
     }, []);
     return (
         <>
