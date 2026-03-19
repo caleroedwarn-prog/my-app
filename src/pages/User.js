@@ -9,10 +9,10 @@ function Users(){
         async function getUsers(){
 
             try{
-            const res = await  axios.get("https://jsonplaholder.typicode.com/users");
+            const res = await  axios.get("https://jsonplaceholder.typicode.com/users");
 
             setUsers(res.data);
-            
+
         }catch(err){
             setError("Failed to load users");
         }finally{
