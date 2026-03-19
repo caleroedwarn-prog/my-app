@@ -13,6 +13,7 @@ import Settings from "./pages/Setting";
 import Stats from "./pages/Stats";
 import NotFound from "./pages/NotFound";
 import Users from "./pages/User";
+import Register from "./pages/Register";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
