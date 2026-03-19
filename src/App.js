@@ -29,6 +29,7 @@ function App() {
             path="logins"
             element={<Logins setIsLoggedIn={setIsLoggedIn} />}
           />
+          <Route path="/register" element={<Register />} />
           <Route
             path="dashboard"
             element={
