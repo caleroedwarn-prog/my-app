@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import api from "../api/api";
 function Users(){
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -9,7 +10,7 @@ function Users(){
         async function getUsers(){
 
             try{
-            const res = await  axios.get("https://jsonplaceholder.typicode.com/users");
+            const res = await  axios.get("/users");
 
             setUsers(res.data);
 
