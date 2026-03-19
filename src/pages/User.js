@@ -10,7 +10,7 @@ function Users(){
         async function getUsers(){
 
             try{
-            const res = await  axios.get("/users");
+            const res = await  api.get("/users");
 
             setUsers(res.data);
 
