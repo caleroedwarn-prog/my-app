@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, lazy, suspense } from "react";
 import Homes from "./pages/Homes";
 import About from "./pages/About";
 import Logins from "./pages/Login";
@@ -14,6 +14,7 @@ import Stats from "./pages/Stats";
 import NotFound from "./pages/NotFound";
 import Users from "./pages/User";
 import Register from "./pages/Register";
+const Login = lazy(() => import("./pages/Login"))
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
