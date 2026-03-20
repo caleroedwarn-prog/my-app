@@ -1,6 +1,10 @@
+import useStore from "../store/Store1";
 import { Navigate } from "react-router-dom";
 
-function ProtectedRoute({ isLoggedIn, children}) {
+function ProtectedRoute({ children }) {
+
+    const isLoggedIn = useStore((s) => s.isLoggedIn);
+
     if(!isLoggedIn) {
         return <Navigate to="/logins" />
     }
