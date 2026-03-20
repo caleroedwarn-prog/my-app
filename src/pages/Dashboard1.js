@@ -1,9 +1,9 @@
-import useStores from "../store/Store1";
+import useStore from "../store/Store1";
 
-function Dashboard1(){
+function Dashboard(){
 
-    const user = useStores((state) => state.user);
-    const logout = useStores((state) => state.logout);
+    const user = useStore((state) => state.user);
+    const logout = useStore((state) => state.logout);
 
     return(
         <div>
@@ -17,4 +17,4 @@ function Dashboard1(){
         </div>
     );
 }
-export default Dashboard1;
+export default Dashboard;

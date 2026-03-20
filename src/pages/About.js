@@ -1,6 +1,6 @@
 import useStore from "../store/Store";
 import Signin from "./Login1";
-import Dashboard1 from "./Dashboard1";
+import Dashboard from "./Dashboard1";
 
 function About() {
     const count = useStore((state) => state.count);
@@ -20,7 +20,7 @@ function About() {
         minus
     </button>
 
-    {isLoggedIn ? <Dashboard1 /> : <Signin />}
+    {isLoggedIn ? <Dashboard /> : <Signin />}
 
     </>
     );
