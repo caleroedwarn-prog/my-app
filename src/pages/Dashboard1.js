@@ -1,6 +1,6 @@
 import useStores from "../store/Store1";
 
-function Dashboard(){
+function Dashboard1(){
 
     const user = useStores((state) => state.user);
     const logout = useStores((state) => state.logout);
@@ -17,4 +17,4 @@ function Dashboard(){
         </div>
     );
 }
-export default Dashboard;
+export default Dashboard1;
