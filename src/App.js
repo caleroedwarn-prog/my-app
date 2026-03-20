@@ -14,7 +14,8 @@ import Stats from "./pages/Stats";
 import NotFound from "./pages/NotFound";
 import Users from "./pages/User";
 import Register from "./pages/Register";
-const Login = lazy(() => import("./pages/Login"))
+const Login = lazy(() => import("./pages/Login"));
+
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
