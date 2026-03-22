@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-const store = configureStore({
+const Store = configureStore({
     reducer: {
 
     }
 });
- export default Store
+ export default Store;
